@@ -1,0 +1,187 @@
+/* spacing */
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rgb(0, 0, 0);
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+  }
+
+  /* typography */
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  thead th, tfoot th {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  th {
+    letter-spacing: 2px;
+  }
+  
+  td {
+    letter-spacing: 1px;
+  }
+  
+  tbody td {
+    text-align: center;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+
+/***** CSS PARA EL CONVERSOR DE CRIPTOMONEDAS *****/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header img{
+    max-width: 300px;
+}
+
+.encabezado{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.encabezado h1{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.textosPrincipales{
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+}
+
+.textosPrincipales h2{
+    padding: 10px;
+}
+
+.textosPrincipales p{
+    padding: 10px;
+}
+
+.formulario{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.formulario label{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+}
+
+.formulario input{
+    padding: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#boton{
+    padding: 10px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #f8931f;
+}
+
+#boton:hover{
+    background-color: rgb(28, 182, 14);
+    color: rgb(0, 0, 0)
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footerUno{
+    background-color: rgb(0, 0, 0);
+}
+
+.footerUno img{
+    max-width: 300px;
+}
+
+.footerDos{
+    padding: 8px;
+    background-color: #d3d3d3;
+    color: rgb(10, 10, 10);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+/***** CSS PARA EL CONVERSOR DE CRIPTOMONEDAS "RESPONSIVE" *****/
+
+@media only screen and (max-width: 650px) {
+    .encabezado{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .encabezado h1{
+        padding: 5px;
+        font-size: 35px;
+    }
+
+    .textosPrincipales{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 605px) and (max-width: 1050px) {
+    .encabezado{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
