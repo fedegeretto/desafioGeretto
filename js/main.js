@@ -30,6 +30,9 @@ function guardarDatos() {
     // Obtener los vendedores que vendan mas 500 usts
     const vendedoresSuperioresA500 = vendedoresDatos.filter(vendedor => { return vendedor.usdt > 500 });
     console.log(vendedoresSuperioresA500);
+
+    // Guardar vendedores en localStorage
+    localStorage.setItem("vendedores", JSON.stringify(vendedoresDatos));
 }
 
 // Creando ARRAY
@@ -42,23 +45,8 @@ function imprimirTabla(datosTabla) {
     }
 }
 
-// console.log(localStorage.getItem("nombre"));
-// console.log(localStorage.getItem("apellido"));
-// console.log(localStorage.getItem("edad"));
-// console.log(localStorage.getItem("usdt"));
-
-// let parrafoOne = document.getElementById("parrafoOne");
-// parrafoOne.innerText = localStorage.getItem("nombre")
-
-// let parrafoTwo = document.getElementById("parrafoTwo");
-// parrafoTwo.innerText = localStorage.getItem("apellido")
-
-// let parrafoThree = document.getElementById("parrafoThree");
-// parrafoThree.innerText = localStorage.getItem("edad")
-
-// let parrafoFour = document.getElementById("parrafoFour");
-// parrafoFour.innerText = localStorage.getItem("usdt")
-
-
-// const mostrar = document.getElementById("boton")
-
+const vendedoresGuardados = localStorage.getItem("vendedores");
+if (vendedoresGuardados) {
+    const vendedoresGuardadosJSON = JSON.parse(vendedoresGuardados);
+    imprimirTabla(vendedoresGuardadosJSON);
+}
