@@ -9,9 +9,18 @@ function guardarDatos() {
     }
 
     let nombreGuardado = document.getElementById("nombre").value;
+    // localStorage.setItem("nombre", nombreGuardado)
+
     let apellidoGuardado = document.getElementById("apellido").value;
+    // localStorage.setItem("apellido", apellidoGuardado)
+
     let edadGuardado = document.getElementById("edad").value;
+    // localStorage.setItem("edad", edadGuardado)
+
     let usdtGuardado = parseInt(document.getElementById("usdt").value);
+    // localStorage.setItem("usdt", usdtGuardado)
+
+
 
     // Creando NUEVO OBJETO
     const vendedorNuevo = new VendedorUSDT(nombreGuardado, apellidoGuardado, edadGuardado, usdtGuardado)
@@ -32,3 +41,24 @@ function imprimirTabla(datosTabla) {
         table.innerHTML += '<tbody><td>' + vendedor.nombre + '</td><td>' + vendedor.apellido + '</td><td>' + vendedor.edad + '</td><td>' + vendedor.usdt + '</td></tbody>';
     }
 }
+
+// console.log(localStorage.getItem("nombre"));
+// console.log(localStorage.getItem("apellido"));
+// console.log(localStorage.getItem("edad"));
+// console.log(localStorage.getItem("usdt"));
+
+// let parrafoOne = document.getElementById("parrafoOne");
+// parrafoOne.innerText = localStorage.getItem("nombre")
+
+// let parrafoTwo = document.getElementById("parrafoTwo");
+// parrafoTwo.innerText = localStorage.getItem("apellido")
+
+// let parrafoThree = document.getElementById("parrafoThree");
+// parrafoThree.innerText = localStorage.getItem("edad")
+
+// let parrafoFour = document.getElementById("parrafoFour");
+// parrafoFour.innerText = localStorage.getItem("usdt")
+
+
+// const mostrar = document.getElementById("boton")
+
